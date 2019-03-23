@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wallpaper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1> Wallpaper calculator </h1>
+            <form>
+  <div class="form-group">
+    <label for="wall_length">Enter wall length</label>
+    <small><input type="text" name="wall_length" value="{{wall_length}}" class="form-control" id="wall_length"  placeholder="Wall length" required></small>
+  </div>
+  <div class="form-group">
+    <label for="wall_width">Enter wall width</label>
+    <input type="text" name="wall_width" value="{{wall_width}}" class="form-control" id="wall_width" placeholder="Wall width" required>
+  </div>
+  <div class="form-group">
+    <label for="wall_height">Enter wall length</label>
+    <input type="text" name="wall_height" value="{{wall_height}}" class="form-control" id="wall_height" placeholder="Wall height" required>
+  </div>
+  <div class="form-group">
+    <label for="wallpaper_width">Enter wall width</label>
+    <input type="text" name="wallpaper_width" value="{{wallpaper_width}}" class="form-control" id="wallpaper_width" placeholder="Wallpaper width" required>
+            </div>
+            <div class="form-group">
+                <label for="wallpaper_length">Enter wall width</label>
+                <input type="text" name="wallpaper_length" value="{{wallpaper_length}}" class="form-control" id="wallpaper_length" placeholder="Wallpaper length" required>
+            </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            {% if result %}
+            <div class="alert alert-{{level}}"> Result: {{result}}</div>
+            {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>
